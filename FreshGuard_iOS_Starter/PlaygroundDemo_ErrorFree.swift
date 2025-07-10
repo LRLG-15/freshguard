@@ -568,11 +568,19 @@ struct PlaygroundDemoView: View {
     }
 }
 
+// MARK: - Main App Entry Point
+struct ContentView: View {
+    var body: some View {
+        PlaygroundDemoView()
+    }
+}
+
 // MARK: - App Structure for Playground
+@main
 struct FreshGuardApp: App {
     var body: some Scene {
         WindowGroup {
-            PlaygroundDemoView()
+            ContentView()
         }
     }
 }
